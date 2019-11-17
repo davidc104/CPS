@@ -36,7 +36,7 @@ body{
 .navbar-brand{
   padding: 10px !important;
   color: white;
-  margin-left: 30px;
+  margin-left: 5px;
   border-radius: 25px;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -58,11 +58,10 @@ body{
 }
 
 .navbar_home{
-  padding: 10px !important;
-  color: white;
-  font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #2767ff;
+   color: white;
+   font-weight: bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   background-color: #2767ff;
 }
 
 .active .dropdown-menu .dropdown-item:active a:hover{
@@ -78,7 +77,7 @@ body{
     border: 0;
 }
 
- .dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
   background-color: #2767ff;
   color: white;
 }   
@@ -99,10 +98,16 @@ a_old{
 }
 
 /* Images */
-img{
+.cps_map{
   width:100% !important;
   height:100% !important;
 }
+
+.panel {
+  width:100% !important;
+  height:100% !important;
+}
+
 .active, .panel:hover{
   border-color: black;
   border-style: solid;
@@ -176,4 +181,13 @@ button:focus {
     background: rgb(216,216,216);
     outline: .01px double black;
     padding: 1%;
+}
+
+#jayhawk-icon {
+  width: 56px;
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
