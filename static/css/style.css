@@ -41,3 +41,23 @@ body {
     outline: .01px double black;
     padding: 1%;
 }
+
+/* Navbar */
+.navbar{
+  max-height: 57px;
+}
+
+.navigation .navbar-brand{
+  color: black;
+  margin-left: 30px;
+  border-radius: 25px;
+  padding: inherit;
+  font-weight: bold;
+  background-color: grey;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar{
+  background-color:white;
+  font-size: 15px;
+}

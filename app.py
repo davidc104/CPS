@@ -21,5 +21,40 @@ def edu_employed_d3():
     return render_template("edu_employed_d3.html")
 
 
+@app.route("/education_unemployed")
+def education_unemployed():
+    return render_template("education_unemployed.html")
+
+
+@app.route("/edu_unemployed_d3")
+def edu_unemployed_d3():
+    return render_template("edu_employed_d3.html")
+
+
+@app.route("/age_employed")
+def age_employed():
+    return render_template("age_employed.html")
+
+
+@app.route("/age_employed_d3")
+def age_employed_d3():
+    return render_template("age_employed_d3.html")
+
+
+@app.route("/age_unemployed")
+def age_unemployed():
+    return render_template("age_unemployed.html")
+
+
+@app.route("/age_unemployed_d3")
+def age_unemployed_d3():
+    return render_template("age_unemployed_d3.html")
+
+
+@app.route("/data")
+def data():
+    return render_template("data.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
