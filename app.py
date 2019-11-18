@@ -61,10 +61,13 @@ def comparison():
     return render_template("comparison.html")
 
 
+<<<<<<< HEAD
 @app.route("/form")
 def game():
     return render_template("form.html")
 
 
+=======
+>>>>>>> d24216172bb5b94937645637e0d42adaea11d861
 if __name__ == "__main__":
     app.run(debug=True)
