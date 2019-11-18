@@ -56,5 +56,15 @@ def data():
     return render_template("data.html")
 
 
+@app.route("/comparison")
+def comparison():
+    return render_template("comparison.html")
+
+
+@app.route("/form")
+def game():
+    return render_template("form.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
