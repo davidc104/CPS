@@ -37,3 +37,10 @@
   fill: #e75480;
   cursor: pointer;
 }
+
+.videoDiv
+{
+    width: 1%; /*or whatever % you prefer*/
+    margin: 0 auto;
+    display: block;
+}
