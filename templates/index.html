@@ -17,6 +17,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <script src="/static/js/marquee.js"></script>
 
         </script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -133,14 +134,33 @@
         </div>
 
 
-
-
-
-
         <!-- Footer Section -->
-        <footer>
-            <div class="footer"></div>
-        </footer>
+
+        <div id="footer">
+            <center>
+                <h3>KU Data Analytics&copy;2019</h3>
+            </center>
+
+            <div id="marquee" class="example" style="width:fullscreen">
+
+                Project members: David Chao, Sebastian Munoz, Christopher Elliott.
+
+                Special thanks to Benjamin Alford, Sasha Bridges, Nelson Caberto.
+                ______________________________________
+
+            </div>
+
+            <script>
+
+                new Marquee('marquee', {
+
+                    speed: .2, direction: 'rtl'
+
+                });
+            </script>
+
+        </div>
+
 
     </body>
 
