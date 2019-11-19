@@ -68,7 +68,7 @@ d3.csv("/static/data/age_employed.csv", function (err, myData) {
     });
   }
 
-  // Default label for X-axis is 'poverty and for Y-axis is 'obese' 
+  // Default label for X-axis is 'poverty and for Y-axis is 'obese'
   // Another axis can be assigned to the variable during an onclick event.
   var currentAxisLabelX = "mo_age";
 
@@ -203,7 +203,7 @@ d3.csv("/static/data/age_employed.csv", function (err, myData) {
     )
     .attr("class", "axis-text-X active")
     .attr("data-axis-name-X", "mo_age")
-    .text("Employed ages in Mossouri");
+    .text("Employed ages in Missouri");
 
   chart
     .append("text")
@@ -396,15 +396,15 @@ d3.csv("/static/data/age_employed.csv", function (err, myData) {
 function writeAnalysis(yAxis) {
   var analysisText = parent.document.getElementById('analysis');
 
-  var responses = "The top five states with the highest employment for bachelor's degree: " +
-    "California, Texas, Florida, New York, and Illinois<br>" +
-    "The top five states with the highest employment for master's degree: " +
-    "California, Texas, New York, Florida, and Illinois<br>" +
-    "The top five states with the highest employment for doctoral degree: " +
-    "California, New York, Texas, Florida, and Massachusetts<br>" +
-    "<br>The future studies:<br>" +
-    "1. What educational fields or majors are in demand by employers, or vice versa?<br>" +
-    "2. Does gender play a role in terms of employed or unemployed<br>";
+  var responses = "The top five age groups in Missouri with the highest employment: " +
+    "23, 40, 58, 59, and 29 respectively.<br>" +
+    "The top five age groups in Kansas with the highest employment: " +
+    "22, 26, 27, 28, and 50 respectively.<br>" +
+
+    "<br>Future studies:<br>" +
+    "1. How does gender affect the rates of employment?<br>" +
+    "2. How does gender in combination with age affect the rates of employment?<br>" +
+    "3. How does race affect the rates of employment<br>";
 
   analysisText.innerHTML = responses;
 };
