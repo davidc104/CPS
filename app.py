@@ -66,5 +66,25 @@ def game():
     return render_template("form.html")
 
 
+@app.route("/data_age_emp")
+def data_age_emp():
+    return render_template("data_age_emp.html")
+    
+
+@app.route("/data_age_unemp")
+def data_age_unemp():
+    return render_template("data_age_unemp.html")
+
+
+@app.route("/data_edu_emp")
+def data_edu_emp():
+    return render_template("data_edu_emp.html")
+
+
+@app.route("/data_edu_unemp")
+def data_edu_unemp():
+    return render_template("data_edu_unemp.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
