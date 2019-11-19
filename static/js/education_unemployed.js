@@ -18,8 +18,8 @@ var svg = d3
 var chart = svg.append("g");
 
 // Read in data from the CSV file
-d3.csv("assets/data/education_unemployed.csv", function (err, myData) {
-  console.log("assets/data/education_unemployed.csv")
+d3.csv("static/data/education_unemployed.csv", function (err, myData) {
+  console.log("static/data/education_unemployed.csv")
 
   if (err) throw err;
 

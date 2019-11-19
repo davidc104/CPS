@@ -1,3 +1,12 @@
+-- Create a database
+CREATE DATABASE project2
+
+
+-- Create a schema cps
+CREATE SCHEMA cps
+    AUTHORIZATION postgres;
+
+
 -- Create a new table
 CREATE TABLE october (
   hrmonth INT,
@@ -10,11 +19,16 @@ CREATE TABLE october (
 );
 
 
-ALTER TABLE october
-ALTER COLUMN gestfips TYPE character varying;
-
-select gestfips as snum,
-case when gestfips='1' then 'AL'
+-- Query employed & unemployed population by education degrees in each State with pemlr in (X, Y) and peeduca=Z
+-- (X, Y) = (1, 2)  employed
+-- (X, Y) = (3, 4)  unemployed
+-- Z = 43  Bachelor's degree
+-- Z = 44  Master's degree
+-- Z = 46  Doctorate degree
+select 
+gestfips as snum,
+case 
+when gestfips='1' then 'AL'
 when gestfips='2' then 'AK'
 when gestfips='4' then 'AZ'
 when gestfips='5' then 'AR'
@@ -66,13 +80,25 @@ when gestfips='54' then 'WV'
 when gestfips='55' then 'WI'
 when gestfips='56' then 'WY'
 else gestfips
-end as state, (sum(pwsswgt)/1000)::int as unemployed from october where peeduca=43 and pemlr in (3,4) group by gestfips order by snum;
+end as state, 
+(sum(pwsswgt)/10000)::int as unemployed 
+from october 
+where  
+pemlr in (X, Y) and
+peeduca = Z 
+group by gestfips order by snum;
 
 
+-- Query employed & unemployment population by ages in Missouri & Kansas pemlr in (X, Y)
+-- (X, Y) = (1, 2)  employed
+-- (X, Y) = (3, 4)  unemployed
+-- Z = 20  Kansas
+-- Z= 29  Mossouri
+select 
+prtage as age, 
+(sum(pwsswgt)/10000)::int as unemployed 
+from october 
+where pemlr in (X, Y) and 
+gestfips = 'Z' 
+group by prtage;
 
-
--- national number of unemployment
-select hryear4, hrmonth, (sum(pwsswgt)/1000)::int as total_unemployed from october where pemlr in (3,4) group by hryear4, hrmonth;
-
--- 
-select peeduca as beyond_college, (sum(pwsswgt)/1000)::int as total_unemployed from october where peeduca in (43,44,45,46) and gestfips=' 29 group by peeduca;
